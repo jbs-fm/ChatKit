@@ -19,9 +19,11 @@ package com.stfalcon.chatkit.messages;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
+import android.widget.EditText;
 import android.widget.Space;
 import androidx.core.view.ViewCompat;
 import androidx.appcompat.widget.AppCompatEditText;
+
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
@@ -31,7 +33,6 @@ import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import androidx.emoji.widget.EmojiEditText;
 import com.stfalcon.chatkit.R;
 
 import java.lang.reflect.Field;
@@ -43,7 +44,7 @@ import java.lang.reflect.Field;
 public class MessageInput extends RelativeLayout
         implements View.OnClickListener, TextWatcher, View.OnFocusChangeListener {
 
-    protected EmojiEditText messageInput;
+    protected EditText messageInput;
     protected ImageButton messageSendButton;
     protected ImageButton attachmentButton;
     protected Space sendButtonSpace, attachmentButtonSpace;
@@ -103,7 +104,7 @@ public class MessageInput extends RelativeLayout
      *
      * @return EditText
      */
-    public EmojiEditText getInputEditText() {
+    public EditText getInputEditText() {
         return messageInput;
     }
 
